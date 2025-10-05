@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Chat v0.2</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hidden { display: none; }
+    body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+    .login-container, .chat-container { max-width: 600px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; }
+    #messages { list-style-type: none; padding: 0; height: 300px; overflow-y: scroll; border: 1px solid #ccc; margin-bottom: 10px; }
+    #messages li { padding: 5px 10px; }
+    .chat-form { display: flex; }
+    .message-input { flex: 1; padding: 10px; }
+    #user-list-container { margin-bottom: 10px; }
+    #user-list { list-style: none; padding-left: 0; }
+    #user-list li { padding: 3px 5px; }
+  </style>
+</head>
+<body>
+
+  <!-- Login -->
+  <div id="login-container" class="login-container">
+    <h2>Enter your username</h2>
+    <input type="text" id="username-input" placeholder="Your name..." />
+    <button id="login-btn">Join Chat</button>
+  </div>
+
+  <!-- Chat -->
+  <div id="chat-container" class="chat-container hidden">
+    <div id="user-list-container">
+      <h3>Users Online:</h3>
+      <ul id="user-list"></ul>
+    </div>
+
+    <ul id="messages"></ul>
+
+    <form id="chat-form" class="chat-form">
+      <input id="message-input" class="message-input" autocomplete="off" placeholder="Type a message..." />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
