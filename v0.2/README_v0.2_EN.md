@@ -4,7 +4,7 @@
 
 ---
 
-# 🚀 Real-Time Mini Chat v0.2
+# 🚀 Mini Chat v0.2
 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green) ![npm](https://img.shields.io/badge/npm-latest-blue) ![Build](https://img.shields.io/badge/build-passing-brightgreen) ![Version](https://img.shields.io/badge/version-v0.2-yellow)
 
